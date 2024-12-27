@@ -1,0 +1,31 @@
+version: '3.9'
+services:
+  db:
+    image: mysql:5.7
+    container_name: mydb
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: myappdb
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypass
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "3306:3306"
+
+  web:
+    build: ./web
+    container_name: myweb
+    depends_on:
+      - db
+    ports:
+      - "8080:80"
+    environment:
+      DB_HOST: db
+      DB_NAME: myappdb
+      DB_USER: myuser
+      DB_PASS: mypass
+    links:
+      - db
+    volumes:
+      - ./web:/var/www/html
