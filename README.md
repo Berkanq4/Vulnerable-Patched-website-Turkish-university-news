@@ -166,4 +166,23 @@ Impact:
 * Arbitrary code execution.
 Payload Used: A .php file containing a web shell.
 
+--------------------------------------------------------------------------------------------------
 
+Video Demonstrations
+Full video:
+https://drive.google.com/file/d/1NWq-NrXaOuIr7qcSnEWw27TuibUv6a1u/view?usp=sharing
+Links to video demonstrations for each vulnerability:
+1. Reflected XSS: 02:05
+2. OS Command Injection: 03:25
+3. CSRF: 06:10
+4. SSRF: 10:32
+5. Path Traversal: 09:30
+6. Unrestricted File Upload: 08:59
+Video Demonstrations of patches
+Links to video demonstrations for each patch:
+7. Reflected XSS: 13:55
+8. OS Command Injection: 14:35
+9. CSRF: 18:35
+10. SSRF: 16:59
+11. Path Traversal: 16:07
+12. Unrestricted File Upload: 19:35
